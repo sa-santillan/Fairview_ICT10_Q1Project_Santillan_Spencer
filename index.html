@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt Generator</title>
+    <link rel="stylesheet"
+    href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module"
+    src="https://pyscript.net/releases/2024.1.1/core.js">
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f1ea;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 8px;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 6px;
+            background-color: #333;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        #receipt {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fafafa;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+        }
+
+        #receipt p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="sku.html">SKU Generator</a>
+
+    <h1>Receipt Generator</h1>
+
+        <h2>Menu</h2>
+
+        <input type="checkbox" id="item1" value=100>
+        <label id="item1-label">Cheesecake</label>
+        <br>
+
+        <input type="checkbox" id="item2" value=80>
+        <label id="item2-label">Danish</label>
+        <br>
+
+        <input type="checkbox" id="item3" value=120>
+        <label id="item3-label">Pie</label>
+        <br>
+
+        <input type="checkbox" id="item4" value=50>
+        <label id="item4-label">Coffee</label>
+        <br>
+
+        <input type="checkbox" id="item5" value=20>
+        <label id="item5-label">Water</label>
+        <br><br>
+
+        <button py-click="generate_receipt">
+            Generate Receipt
+        </button>
+
+        <h2>Receipt</h2>
+
+        <div id="receipt">
+            <p>Subtotal: ₱0.00</p>
+            <p>VAT: ₱0.00</p>
+            <p>Total Amount: ₱0.00</p>
+        </div>
+
+        <py-script src="main.py"></py-script>
+
+    </div>
+
+</body>
+</html>
+
